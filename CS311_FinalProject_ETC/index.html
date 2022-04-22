@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unit Converter</title>
+        <link rel="stylesheet" href="css/myStyle.css" />
+    </head>
+
+    <div id="wrapper">
+        <header>
+            <h1><strong>Unit Converter</strong></h1>
+        </header>
+        <div id="unit1">
+            <input type="text" id="txtUnit1Input" onkeyup="calculate(1)"><br>
+            <label class="unitLabel" id="lblUnit1"></label>
+        </div>
+        <div id="unit2">
+            <input type="text" id="txtUnit2Input" onkeyup="calculate(2)"><br>
+            <label class="unitLabel" id="lblUnit2"></label>
+        </div>
+
+        <div id="conversionSelection">
+            <input type="radio" name="conversion" id="btnMtF" onclick="setLabels('Miles', 'Feet', 1)"/>
+                <label for="btnMtF">Miles to Feet / Feet to Miles</label><br>
+
+            <input type="radio" name="conversion" id="btnKtM" onclick="setLabels('Kilometers', 'Miles', 2)"/>
+                <label for="btnKtM">Kilometers to Miles / Miles to Kilometers</label><br>
+
+            <input type="radio" name="conversion" id="btnCtF" onclick="setLabels('Celsius', 'Fahrenheit', 3)"/>
+                <label for="btnCtF">Celsius to Fahrenheit / Fahrenheit to Celsius</label><br>
+
+            <input type="radio" name="conversion" id="btnKtP" onclick="setLabels('Kilograms', 'Pounds', 4)"/>
+                <label for="btnKtP">Kilograms to Pounds / Pounds to Kilograms</label><br>
+
+            <input type="radio" name="conversion" id="btnGtO" onclick="setLabels('Grams', 'Ounces', 5)"/>
+                <label for="btnGtO">Grams to Ounces / Ounces to Grams</label><br>
+        </div>
+
+        <div id="instructions">
+            <h3><strong>Instructions</strong></h3>
+            <p>To use this unit converter, choose which of the conversions you want to perform by selecting one of the buttons above.<br>After selecting a conversion option, simply type into one of the textboxes!<br>The conversions will happen automatically as you type.<br>You can choose either one of the textboxes to type your number into, all conversions go both ways.<br>Just be sure to <strong>only type numbers</strong>!<br>No letters, commas, or special characters.</p>
+        </div>
+    </div>        
+    <script src='js/properties.js'></script>
+</html>
